@@ -16,7 +16,7 @@ export function date() {
 }
 
 export function weather(town) {
-	fetch("https://wttr.in/" + town + "?format=  %t  %c  +  %m ")
+	fetch("https://wttr.in/" + town + "?format= %C %t %m ")
 	.then(response => response.text())
 	.then(text => {
 		document.getElementById("weather").innerHTML = text;
