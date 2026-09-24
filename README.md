@@ -1,8 +1,6 @@
 # Start Page 
 
-
->Uma página incial para navegadores de internet
-
+>Uma página incial para navegadores de internet com auto complete sem AI
 
 <img src="img/startpage.png" alt="Imargem do Projeto StartPage" width="400" />
 
@@ -16,6 +14,8 @@
 
 #### Como utilizar 
 
+### Com picom
+
 ``` bash
 
     # Para rodar em localhost o servidor node usando seu usuário sem root.
@@ -23,7 +23,7 @@
 
     sudo setcap 'cap_net_bind_service=+ep' /usr/bin/node
 
-    git pull https://github.com/aou-aou/startpage 
+    git pull https://github.com/MrWesleyR/startpage 
 
     cd startpage
     
@@ -32,6 +32,7 @@
     node server 
 
 ```
+
 
 #### Como pequisar 
 
@@ -59,4 +60,10 @@ edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L7) .
 
 Para alias de serviços 
 edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L27) .
+
+
+# Picom 
+
+Definição: Um compositor leve para X11
+Source: https://github.com/yshui/picom
 
