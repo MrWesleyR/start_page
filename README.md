@@ -2,7 +2,8 @@
 
 >Uma página incial para navegadores de internet com auto complete sem AI
 
-<img src="img/startpage.png" alt="Imargem do Projeto StartPage" width="400" />
+<img src="img/startpage.png" alt="Imargem do Projeto StartPage" width="800" />
+
 
 ### Fucionalidades
 
