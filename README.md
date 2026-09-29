@@ -1,6 +1,6 @@
 # Start Page 
 
->Uma página incial para navegadores de internet com auto complete sem AI
+>Uma página inicial para navegadores de internet, com preenchimento automático e sem IA.
 
 <img src="img/startpage.png" alt="Imargem do Projeto StartPage" width="800" />
 
@@ -8,34 +8,38 @@
 ### Fucionalidades
 
 1. Links favoritos.
-2. Direcionamento para sites como youtube, github.
-3. Fazer pesquisas em buscadores alternativos.
-4. Autocomplete.
-5. Abertura de links amigaveis, complexos e locais na barra de pesquisa.
+2. Direcionamento para sites como YouTube e GitHub.
+3. Pesquisas em mecanismos de busca alternativoss.
+4. Preenchimento automático.
+5. Abertura de links amigáveis, complexos e locais pela barra de pesquisa.
 
 #### Como utilizar 
 
 ``` bash
 
-    # Para rodar em localhost o servidor node usando seu usuário sem root.
-    pacman -S setcap 
+# Instale o setcap para executar o servidor Node.js
+# utilizando um usuário comum, sem privilégios de root.
+pacman -S libcap
 
-    sudo setcap 'cap_net_bind_service=+ep' /usr/bin/node
+sudo setcap 'cap_net_bind_service=+ep' /usr/bin/node
 
-    git pull https://github.com/MrWesleyR/startpage 
+git clone https://github.com/MrWesleyR/startpage
 
-    cd startpage
-    
-    npm install
-    
-    node server 
+cd startpage
+
+npm install
+
+node server
 
 ```
-### Com picom
+### Integração com o Picom
+As cores estão disponíveis no arquivo:
 
-``` json
-Cores em .cache/wal/color.json
-
+``` text
+.cache/wal/color.json
+```
+Exemplo: 
+```json
 {
     "checksum": "989fe7f46470466cb44b08115bb7b1ab",
     "wallpaper": "/home/user/.wall/bg1.png",
@@ -65,37 +69,34 @@ Cores em .cache/wal/color.json
         "color15": "#c6c6c6"
     }
 }
-
-Serão resposavel pela mudança da coloração página ao trocar de wallpaper.
-
 ```
+Essas cores são responsáveis por alterar a cor da página sempre que o papel de parede for trocado.
+
 
 #### Como pequisar 
 
-No momento e reconhecido os buscadores:
-
+Atualmente, os seguintes mecanismos de busca são compatíveis:
     - DuckDuckDuckGo
     - Google
     - StartPage
     - LibreY
 
-Ao fazer uma pesquisa simples por padrão sera chamado o DuckDuckGo,
-caso queira fazer pesquisas em outros buscadores digite o nome do buscador
-na barra de pesquisa, siga os exemplos abaixo:
+Ao realizar uma pesquisa simples, o DuckDuckGo será utilizado por padrão.
 
-* DuckDuckGO -  du sua pesquisa aqui
-* Google - go sua pesquisa aqui
-* LibreY - ly sua pesquisa aqui
-* StartPage - sp sua pesquisa aqui
+Para pesquisar utilizando outro mecanismo, digite o respectivo alias antes dos termos de busca, conforme os exemplos abaixo:
 
-Caso queira adicionar outros buscadores 
-edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L83) .
 
-Para mais direcionamentos de instâncias
-edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L7) .
 
-Para alias de serviços 
-edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L27) .
+* DuckDuckGO -  ```du sua pesquisa aqui```
+* Google - ```go sua pesquisa aqui```
+* LibreY - ```ly sua pesquisa aqui```
+* StartPage - ```sp sua pesquisa aqui```
+
+Para adicionar outros mecanismos de busca, edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L83) .
+
+Para configurar outras instâncias, edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L7) .
+
+Para adicionar aliases de serviços, edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L27) .
 
 
 # Picom 
